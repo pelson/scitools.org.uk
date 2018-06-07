@@ -30,49 +30,24 @@
 
   </head><body>
 
-
-
-
-<style>
-.github-img {
-  position: absolute;
-  top: 0;
-  right: 80px;
-  border: 0;
-}
-
-/* Take into account the resizing effect of the page (which has a minimum */
-/* width of 740px + 80px margins). */
-@media screen and (max-width: calc(740px + 80px + 80px)) {
-  .github-img {
-    right: calc(100% - 740px - 80px);
-  }
-}
-
-@media screen and (max-width: calc(740px + 80px)) {
-  .github-img {
-    left: calc(740px + 80px - 149px);
-    right: 0px;
-  }
-}
-</style>
-<a href="https://github.com/you">
-    <img class="github-img" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub">
+<a href="https://github.com/SciTools/iris">
+    <img class="github-forkme" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"
+         alt="Fork Iris on GitHub" />
 </a>
 
 
-<div style="background-color: white; text-align: left; padding: 0px; height: 149px;">
+<div class="header-content">
     <a href="../../index.html">
-        <img src="../../_static/Iris7_1_trim_100.png" border="0" style="height: 100px; vertical-align: middle; float: left; margin: 20px 2em 0.8em 4%; padding: 0px;" alt="Logo" />
+        <img src="../../_static/Iris7_1_trim_100.png" alt="Iris logo" />
     </a>
-    <div style="display: inline-block; width: calc(100% - 110px - 2em - 4%);">
-      <h1 style="font-size: 3.5rem; font-family: 'Alike', serif; margin-top: 40px; padding: 0px; color: #323232; padding-bottom: 0.2em;">
-          Iris <span style="font-size: 1.5rem;">v2.1</span>
+    <div class="strapline">
+      <h1>
+          Iris <span class="version">v2.1</span>
       </h1>
-      <h4 style="padding: 0px; max-width: 60ch; margin-top: 0px; margin-bottom: 0px;">
-         a powerful, easy to use, community-driven Python library for analysing and
+      <h2>
+         a powerful, format-agnostic, and community-driven Python library for analysing and
          visualising Earth science data
-      </h4>
+      </h2>
     </div>
 </div>
 
@@ -617,7 +592,7 @@ projections) we use a map projection, such as PlateCarree.</p>
 <blockquote>
 <div><dl class="class">
 <dt id="iris.coord_systems.Mercator">
-<em class="property">class </em><code class="descclassname">iris.coord_systems.</code><code class="descname">Mercator</code><span class="sig-paren">(</span><em>longitude_of_projection_origin=0</em>, <em>ellipsoid=None</em><span class="sig-paren">)</span><a class="headerlink" href="#iris.coord_systems.Mercator" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">iris.coord_systems.</code><code class="descname">Mercator</code><span class="sig-paren">(</span><em>longitude_of_projection_origin=0.0</em>, <em>ellipsoid=None</em>, <em>standard_parallel=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#iris.coord_systems.Mercator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#iris.coord_systems.CoordSystem" title="iris.coord_systems.CoordSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">iris.coord_systems.CoordSystem</span></code></a></p>
 <p>Constructs a Mercator coord system.</p>
 <dl class="docutils">
@@ -631,6 +606,11 @@ projections) we use a map projection, such as PlateCarree.</p>
 <li><dl class="first docutils">
 <dt>ellipsoid</dt>
 <dd><a class="reference internal" href="#iris.coord_systems.GeogCS" title="iris.coord_systems.GeogCS"><code class="xref py py-class docutils literal notranslate"><span class="pre">GeogCS</span></code></a> defining the ellipsoid.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>standard_parallel</dt>
+<dd>the latitude where the scale is 1. Defaults to 0 degrees.</dd>
 </dl>
 </li>
 </ul>
@@ -673,6 +653,12 @@ projections) we use a map projection, such as PlateCarree.</p>
 <dt id="iris.coord_systems.Mercator.longitude_of_projection_origin">
 <code class="descname">longitude_of_projection_origin</code><em class="property"> = None</em><a class="headerlink" href="#iris.coord_systems.Mercator.longitude_of_projection_origin" title="Permalink to this definition">¶</a></dt>
 <dd><p>True longitude of planar origin in degrees.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="iris.coord_systems.Mercator.standard_parallel">
+<code class="descname">standard_parallel</code><em class="property"> = None</em><a class="headerlink" href="#iris.coord_systems.Mercator.standard_parallel" title="Permalink to this definition">¶</a></dt>
+<dd><p>The latitude where the scale is 1 (defaults to 0 degrees).</p>
 </dd></dl>
 
 </dd></dl>
@@ -1286,6 +1272,8 @@ projections) we use a map projection, such as PlateCarree.</p>
         &copy; <a href="../../copyright.html">British Crown Copyright</a> 2010 - 2018, Met Office
     </div>
 
+    <!-- Include a version switcher to easily move between the documentation of different versions -->
+    <script type=text/javascript src=/iris/docs/version_switch.js></script>
 
   </body>
 </html>

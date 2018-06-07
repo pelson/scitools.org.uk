@@ -30,49 +30,24 @@
 
   </head><body>
 
-
-
-
-<style>
-.github-img {
-  position: absolute;
-  top: 0;
-  right: 80px;
-  border: 0;
-}
-
-/* Take into account the resizing effect of the page (which has a minimum */
-/* width of 740px + 80px margins). */
-@media screen and (max-width: calc(740px + 80px + 80px)) {
-  .github-img {
-    right: calc(100% - 740px - 80px);
-  }
-}
-
-@media screen and (max-width: calc(740px + 80px)) {
-  .github-img {
-    left: calc(740px + 80px - 149px);
-    right: 0px;
-  }
-}
-</style>
-<a href="https://github.com/you">
-    <img class="github-img" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub">
+<a href="https://github.com/SciTools/iris">
+    <img class="github-forkme" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"
+         alt="Fork Iris on GitHub" />
 </a>
 
 
-<div style="background-color: white; text-align: left; padding: 0px; height: 149px;">
+<div class="header-content">
     <a href="../index.html">
-        <img src="../_static/Iris7_1_trim_100.png" border="0" style="height: 100px; vertical-align: middle; float: left; margin: 20px 2em 0.8em 4%; padding: 0px;" alt="Logo" />
+        <img src="../_static/Iris7_1_trim_100.png" alt="Iris logo" />
     </a>
-    <div style="display: inline-block; width: calc(100% - 110px - 2em - 4%);">
-      <h1 style="font-size: 3.5rem; font-family: 'Alike', serif; margin-top: 40px; padding: 0px; color: #323232; padding-bottom: 0.2em;">
-          Iris <span style="font-size: 1.5rem;">v2.1</span>
+    <div class="strapline">
+      <h1>
+          Iris <span class="version">v2.1</span>
       </h1>
-      <h4 style="padding: 0px; max-width: 60ch; margin-top: 0px; margin-bottom: 0px;">
-         a powerful, easy to use, community-driven Python library for analysing and
+      <h2>
+         a powerful, format-agnostic, and community-driven Python library for analysing and
          visualising Earth science data
-      </h4>
+      </h2>
     </div>
 </div>
 
@@ -199,7 +174,7 @@ The specified coordinate must exist on the cube being interpolated! For example:
 </div></blockquote>
 <p>are all examples of valid sample points.</p>
 <p>The values for coordinates that correspond to date/times can be supplied as
-datetime.datetime or netcdftime.datetime instances,
+datetime.datetime or cftime.datetime instances,
 e.g. <code class="docutils literal notranslate"><span class="pre">[('time',</span> <span class="pre">datetime.datetime(2009,</span> <span class="pre">11,</span> <span class="pre">19,</span> <span class="pre">10,</span> <span class="pre">30))]</span></code>).</p>
 <p>Let’s take the air temperature cube we’ve seen previously:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">air_temp</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">load_cube</span><span class="p">(</span><span class="n">iris</span><span class="o">.</span><span class="n">sample_data_path</span><span class="p">(</span><span class="s1">&#39;air_temp.pp&#39;</span><span class="p">))</span>
@@ -278,9 +253,10 @@ the one defined below:</p>
 <p>This cube has a “hybrid-height” vertical coordinate system, meaning that the vertical
 coordinate is unevenly spaced in altitude:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">column</span><span class="o">.</span><span class="n">coord</span><span class="p">(</span><span class="s1">&#39;altitude&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">points</span><span class="p">)</span>
-<span class="go">[ 418.69836  434.5705   456.7928   485.3665   520.2933   561.5752</span>
-<span class="go">  609.2145   663.2141   723.57697  790.30664  863.4072   942.8823</span>
-<span class="go"> 1028.737   1120.9764  1219.6051 ]</span>
+<span class="go">[418.6983642578125 434.57049560546875 456.79278564453125 485.3664855957031</span>
+<span class="go"> 520.2932739257812 561.5751953125 609.2144775390625 663.214111328125</span>
+<span class="go"> 723.5769653320312 790.306640625 863.4072265625 942.88232421875</span>
+<span class="go"> 1028.737060546875 1120.9764404296875 1219.6051025390625]</span>
 </pre></div>
 </div>
 <p>We could regularise the vertical coordinate by defining 10 equally spaced altitude
@@ -325,8 +301,9 @@ For example, to mask values that lie beyond the range of the original data:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">scheme</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">analysis</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">extrapolation_mode</span><span class="o">=</span><span class="s1">&#39;mask&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">new_column</span> <span class="o">=</span> <span class="n">column</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">sample_points</span><span class="p">,</span> <span class="n">scheme</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">new_column</span><span class="o">.</span><span class="n">coord</span><span class="p">(</span><span class="s1">&#39;altitude&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">points</span><span class="p">)</span>
-<span class="go">[       nan  494.44452  588.8889   683.33325  777.77783  872.2222</span>
-<span class="go">  966.66675 1061.1111  1155.5554         nan]</span>
+<span class="go">[nan 494.44451904296875 588.888916015625 683.333251953125 777.77783203125</span>
+<span class="go"> 872.2222290039062 966.666748046875 1061.111083984375 1155.555419921875</span>
+<span class="go"> nan]</span>
 </pre></div>
 </div>
 </div>
@@ -589,6 +566,8 @@ cached regridder.</p>
         &copy; <a href="../copyright.html">British Crown Copyright</a> 2010 - 2018, Met Office
     </div>
 
+    <!-- Include a version switcher to easily move between the documentation of different versions -->
+    <script type=text/javascript src=/iris/docs/version_switch.js></script>
 
   </body>
 </html>

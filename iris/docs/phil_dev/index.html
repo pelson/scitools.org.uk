@@ -38,15 +38,6 @@
 #sliderNav div { display: inline-block; height: 8px; width: 8px; margin: 0 2px;
   border: #ccc medium solid; border-radius: 50%; box-shadow: 0 0 2px 0 #ccc;}
 #sliderNav div.activeSlide { border-color: #777; background-color: #ccc; }
-
-
-.bodywrapper {
-    width: 100%;
-}
-.sphinxsidebarwrapper {
-    display: none
-}
-
 </style>
 
 <script type="text/javascript">
@@ -94,49 +85,24 @@ $(document).bind('keypress', function(e) {
 
   </head><body>
 
-
-
-
-<style>
-.github-img {
-  position: absolute;
-  top: 0;
-  right: 80px;
-  border: 0;
-}
-
-/* Take into account the resizing effect of the page (which has a minimum */
-/* width of 740px + 80px margins). */
-@media screen and (max-width: calc(740px + 80px + 80px)) {
-  .github-img {
-    right: calc(100% - 740px - 80px);
-  }
-}
-
-@media screen and (max-width: calc(740px + 80px)) {
-  .github-img {
-    left: calc(740px + 80px - 149px);
-    right: 0px;
-  }
-}
-</style>
-<a href="https://github.com/you">
-    <img class="github-img" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub">
+<a href="https://github.com/SciTools/iris">
+    <img class="github-forkme" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"
+         alt="Fork Iris on GitHub" />
 </a>
 
 
-<div style="background-color: white; text-align: left; padding: 0px; height: 149px;">
+<div class="header-content">
     <a href="#">
-        <img src="_static/Iris7_1_trim_100.png" border="0" style="height: 100px; vertical-align: middle; float: left; margin: 20px 2em 0.8em 4%; padding: 0px;" alt="Logo" />
+        <img src="_static/Iris7_1_trim_100.png" alt="Iris logo" />
     </a>
-    <div style="display: inline-block; width: calc(100% - 110px - 2em - 4%);">
-      <h1 style="font-size: 3.5rem; font-family: 'Alike', serif; margin-top: 40px; padding: 0px; color: #323232; padding-bottom: 0.2em;">
-          Iris <span style="font-size: 1.5rem;">v2.1</span>
+    <div class="strapline">
+      <h1>
+          Iris <span class="version">v2.1</span>
       </h1>
-      <h4 style="padding: 0px; max-width: 60ch; margin-top: 0px; margin-bottom: 0px;">
-         a powerful, easy to use, community-driven Python library for analysing and
+      <h2>
+         a powerful, format-agnostic, and community-driven Python library for analysing and
          visualising Earth science data
-      </h4>
+      </h2>
     </div>
 </div>
 
@@ -182,18 +148,48 @@ $(document).bind('keypress', function(e) {
             
 
 
-<p style="font-style: italic; font-size: larger;">
-Iris seeks to provide a powerful, easy to use, and community-driven Python library for analysing and visualising meteorological and oceanographic data sets.
+
+
+<p>
+  Iris implements a data model based on the <a href="http://cfconventions.org/">CF conventions</a>
+  giving you a powerful, format-agnostic, interface for working with your data.
+  It excels when working with multi-dimensional Earth Science data, where tabular
+  representations become unwieldy and inefficient.
 </p>
 <p>
-With Iris you can:
+  <a href="http://cfconventions.org/standard-names.html">CF Standard names</a>,
+  <a href="https://github.com/SciTools/cf_units">units</a>, and coordinate metadata
+  are built-in to Iris, giving you a rich and expressive interface for maintaining
+  an accurate representation of your data. Its first-class treatment of data and
+  associated metadata includes:
+</p>
 <ul>
-    <li>Use a single API to work on your data, irrespective of its original format.
-    <li>Read and write (CF-)netCDF, GRIB, and PP files.</li>
-    <li>Easily produce graphs and maps via integration with matplotlib and cartopy.</li>
+  <li>aggregations and reductions (min, max, (area-)weighted mean, etc.)</li>
+  <li>interpolation and regridding (nearest-neighbor, linear, area-weighted, etc.)</li>
+  <li>operator overloads (<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, etc.)</li>
+  <li>merge and concatenate</li>
+  <li>subsetting and extraction</li>
+  <li>unit conversion</li>
+  <li>a visualisation interface based on <a href="https://matplotlib.org/">matplotlib</a> and
+    <a href="https://scitools.org.uk/cartopy/docs/latest/">cartopy</a></li>
 </ul>
+<p>
+  A number of file formats are recognised by Iris, including CF-compliant NetCDF, GRIB,
+  and PP, and it has a plugin architecture to allow other formats to be added seamlessly.
+</p>
+<p>
+  Building upon <a href="http://www.numpy.org/">numpy</a> and
+  <a href="https://dask.pydata.org/en/latest/">dask</a>,
+  Iris scales from efficient single-machine workflows right through to multi-core
+  clusters and HPC.
+  Interoperability with packages from the wider scientific python ecosystem comes from Iris'
+  use of standard numpy/dask arrays as its underlying data storage.
 </p>
 
+<div style="float:right; padding-top: 50px; padding-right: 10px;">
+	<div class="slideshow"></div>
+	<div id="sliderNav" align="center"></div>
+</div>
 
 <div style="float: left;">
 	<ul style="list-style: none; margin-left: -15px; margin-right: 0px; margin-top: 50px;">
@@ -222,16 +218,12 @@ With Iris you can:
         <span class="linkdescr">extra information on specific technical issues</span></p>
     </li>
     <li>
-        <p class="biglink"><a class="biglink" href="whatsnew/2.0.html">What's new in Iris 2.0?</a><br/>
+        <p class="biglink"><a class="biglink" href="whatsnew/2.1.html">What's new in Iris 2.1?</a><br/>
         <span class="linkdescr">recent changes in Iris's capabilities</span></p>
     </li>
 	</ul>
 </div>
 
-<div style="float:right; padding-top: 50px; padding-right: 10px;">
-	<div class="slideshow"></div>
-	<div id="sliderNav" align="center"></div>
-</div>
 
 <div class="clearer"></div>
 
@@ -263,6 +255,8 @@ With Iris you can:
         &copy; <a href="copyright.html">British Crown Copyright</a> 2010 - 2018, Met Office
     </div>
 
+    <!-- Include a version switcher to easily move between the documentation of different versions -->
+    <script type=text/javascript src=/iris/docs/version_switch.js></script>
 
   </body>
 </html>
