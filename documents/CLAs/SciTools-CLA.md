@@ -1,43 +1,46 @@
 # SciTools Contributor License Agreement (v4)
 
 
-Thank you for your interest in contributing to products managed by the Met Office on behalf
-of SciTools.
+Thank you for your interest in contributing to the *SciTools projects*, which are managed by
+the *Met Office*.
 
 In order to clarify the intellectual property license granted with Contributions from any person
-or entity, SciTools projects must have a Contributor License Agreement ("**CLA**") on file that
+or entity, all SciTools projects must have a Contributor License Agreement ("**CLA**") on file that
 has been signed by each Contributor, indicating agreement to the license terms below.
 Each contributing individual within a contributing organisation must personally sign the CLA form.
 
-This license is for your protection as a Contributor as well as the protection of SciTools and
-users of its products; it does not change your rights to use your own Contributions for any other
+This license is for your protection as a Contributor as well as the protection of SciTools projects
+and its users; it does not change your rights to use your own Contributions for any other
 purpose.
 
-Contributions shall be made by submitting a Pull Request to the relevant project code repository.
+To sign the CLA please create a file in
+https://github.com/SciTools/scitools.org.uk/tree/master/documents/CLAs/signed/ containing the
+contents of this agreement with your name and the date included at the end, and submit this as
+a Pull Request to the https://github.com/SciTools/scitools.org.uk repository.
 
-The Met Office will use and process your details collected for the purposes of contribution to
-products owned or managed by the Met Office.
+The Met Office will use and process your details collected for the purposes of supporting the
+development of the SciTools projects.
 Your details will be processed in accordance with European Data Protection Law.
 Personal data processed by the Met Office will not be disclosed to third parties for marketing
-purposes.
+purposes. However, your signed CLA and GitHub profile name will be published on a public website.
+This will permit Developers of a SciTools project to ascertain that you have signed this agreement.
 
-Your signed CLA and GitHub profile name will be published on a public website.
-This will permit Developers of a product to ascertain that you have signed this agreement.
-
-Please open a Pull Request which removes the agreement to request that your GitHub name and signed
-CLA be removed from the website if you no longer wish to contribute to SciTools products.
+Should you no longer wish to contribute to SciTools projects and would like to cease this agreement,
+please open a Pull Request to remove your signed CLA from
+https://github.com/SciTools/scitools.org.uk/tree/master/documents/CLAs/signed/.
 Please be aware that for purposes of recording previous agreements, it is not possible to withdraw
-the signed CLA from the historical archive (git repository).
+the signed CLA from the historical archive (git repository), and that the signed CLA continues to
+apply for all Contributions that have already been accepted.
 
-You accept and agree to the following terms and conditions for Your present and future Contributions
-submitted to SciTools projects.
+You accept and agree to the following terms and conditions for Your past, present and future
+Contributions submitted to SciTools projects.
 In return, the Met Office shall not use Your Contributions in a way that is contrary to the
-interests of users of the products.
+interests of users of the SciTools projects.
 Except for the license granted herein to the Met Office and recipients of software distributed
-by SciTools, You reserve all right, title, and interest in and to Your Contributions.
+by SciTools projects, You reserve all right, title, and interest in and to Your Contributions.
 
 
-##1. Definitions
+## 1. Definitions
 
 "**You**" (or "**Your**") shall mean the copyright owner or legal entity authorized by the
 copyright owner that is making this Agreement with the Met Office.
@@ -52,37 +55,35 @@ ownership of such entity.
 
 "**Contribution**" shall mean any original work of authorship, including any modifications or
 additions to an existing work, that is intentionally submitted by You to the SciTools projects
-for inclusion in, or documentation of, any of the products owned or managed by the
-Met Office (the "**Work**").
+<<DELETE: for inclusion in, or documentation of, any of the products owned or managed by the
+Met Office (the "**Work**")>>.
 For the purposes of this definition, "**submitted**" means any form of electronic, verbal, or
-written communication sent to SciTools projects or its representatives or members, including
-but not limited to communication on electronic mailing lists, source code control systems, and
-issue tracking systems that are managed by, or on behalf of, the OpenWIS Association for the
-purpose of discussing and improving the Work, but excluding communication that is conspicuously
-marked or otherwise designated in writing by You as "**Not a Contribution**".
+written communication sent to the Met Office or SciTools projects or its representatives or
+members, including but not limited to communication on electronic mailing lists, source code
+control systems, and issue tracking systems that are managed by, or on behalf of,
+SciTools projects for the purpose of discussing and improving the Work, but excluding communication
+that is conspicuously marked or otherwise designated in writing by You as "**Not a Contribution**".
 
-“**Met Office**” shall mean the OpenWIS Association Association Internationale Sans But
-Lucratif, a not-for-profit association established under the laws of the Kingdom of
-Belgium with its registered office at Ringlaan 3, Avenue Circulaire, B-1180, Brussels, Belgium.
+“**Met Office**” shall mean the Met Office, an Executive Agency of the Department for
+Business, Energy & Industrial Strategy of the United Kingdom of Great Britain and
+Northern Ireland (“BEIS”), whose principal place of business is situated at
+FitzRoy Road, Exeter, Devon EX1 3PB, United Kingdom, for an on behalf of BEIS.
 
-“**SciTools**” shall mean the ...
+“**SciTools projects**” shall mean tools made available through public channels such as the
+SciTools and SciTools-incubator GitHub organisation. <<TODO: Help with this>>
 
 “**Parties**” shall mean the Met Office and You.
 
-“**Working Day**” shall mean a day other than a Saturday, Sunday or public holiday in Belgium
-when banks in Brussels are open for business.
+“**Working Day**” shall mean a day other than a Saturday, Sunday or public holiday in England
+when banks in London are open for business.
 
-“**Data**” shall have the same meaning as set out in the Belgian law on the protection of
-privacy in relation to the processing of personal data (*Wet tot bescherming van de persoonlijke
-levenssfeer ten opzichte van de verwerking van persoonsgegevens / Loi relative à la
-protection de la vie privée à l'égard des traitements de données à caractère personnel*).
-
+“**Data**” shall have the same meaning as set out in the Data Protection Act 1998. <<TODO: GDPR>>
 
 
 ## 2. Grant of copyright license
 
-Subject to the terms and conditions of this Agreement, You hereby grant to the Met Office
-and to recipients of software distributed by the Met Office a perpetual, worldwide,
+Subject to the terms and conditions of this Agreement, You hereby grant to the SciTools projects
+and to recipients of SciTools projects a perpetual, worldwide,
 non-exclusive, royalty-free, irrevocable copyright license to reproduce, prepare derivative
 works of, publicly display, publicly perform, sublicense, and distribute Your Contributions
 and such derivative works under the terms of the license specified for the SciTools project
@@ -92,13 +93,13 @@ file of the project's source code repository.
 The license chosen for a SciTools project shall be one of the open source licenses from the
 list maintained by the Open Source Initiative (OSI) (https://opensource.org/licenses).
 
-You agree and acknowledge that the Met Office and its licensees may sublicense and distribute
+You agree and acknowledge that SciTools projects may sublicense and distribute
 your Contributions under any subsequent version of the license specified for the SciTools project
 to which your Contribution was made.
 Furthermore, You agree that, by agreement through the standard SciTools governance process,
 a SciTools project may change the license (and this CLA) from time to time to an alternative
 open source license from the list maintained by the OSI in order to suit the evolution of the
-Project.  A [history of approved CLAs is available at ... .
+Project.
 
 
 ## 3. Intellectual property infringement
@@ -116,7 +117,7 @@ You represent that you are legally entitled to grant the above license.
 If your employer(s) has rights to intellectual property that you create that includes your
 Contributions, you represent that you have received permission to make Contributions on behalf
 of that employer, or that your employer has waived such rights for your Contributions to the
-Met Office.
+SciTools projects.
 
 
 ## 5. Contribution of Your creation(s)
@@ -132,7 +133,7 @@ of which you are personally aware and which are associated with any part of Your
 ## 6. Contribution of creation(s) on behalf of a third-party
 
 Should You wish to submit work that is not Your original creation, You may submit it to the
-Met Office separately from any Contribution, identifying the complete details of its source
+SciTools project separately from any Contribution, identifying the complete details of its source
 and of any license or other restriction (including, but not limited to, related patents,
 trademarks, and license agreements) of which you are personally aware, and conspicuously marking
 the work as "Submitted on behalf of a third-party: Third Party Name ________".
@@ -157,8 +158,8 @@ The Parties shall attempt in good faith to negotiate a settlement to any dispute
 them out of or in connection with this Agreement within 30 Working Days of the dispute arising.
 
 If the dispute cannot be resolved, then the Parties shall attempt to settle it by mediation in
-accordance with the TODO  Mediation (“EPANI”) Model Mediation
-Procedure from time-to-time in force.
+accordance with the Centre for Dispute Resolution (“CEDR”) Model Mediation Procedure from
+time-to-time in force.
 
 To initiate the mediation a party to the Agreement must give notice in writing (the “ADR Notice”)
 to the other party requesting mediation in accordance with this clause.
@@ -168,7 +169,7 @@ to the other party requesting mediation in accordance with this clause.
 
 The mediation is to take place not later than 30 Working Days after the ADR Notice.
 If there is any issue on the conduct of the mediation upon which the Parties cannot agree within
-14 Working Days of the ADR Notice, then EPANI shall, at the request of either party, decide the
+14 Working Days of the ADR Notice, then CEDR shall, at the request of either party, decide the
 issue for the Parties, having consulted with them.
 
 Unless otherwise agreed, all negotiations connected with the dispute and any settlement shall
@@ -189,7 +190,8 @@ urgent interim equitable relief (including, but not limited to, an injunction).
 ## 10. Policies and procedures
 
 Any person or organization wishing to Contribute to an SciTools Project shall abide by the
-[Internal Rules]({{ "/rules/" | prepend: site.baseurl }}), [Technical Rules]({{ "/tr/" | prepend: site.baseurl }}) and [Code of Conduct]({{ "/conduct/" | prepend: site.baseurl }}) of the OpenWIS Association AISBL and the policies and procedures defined by the [OpenWIS Steering Committee]( {{"/structure/steering-committee.html" | prepend: site.baseurl}} ), including the [process used to manage the CLA]( {{"/static/CLA/CLAprocess.html" | prepend: site.baseurl}} ).
+Internal Rules, Technical Rules and Code of Conduct of SciTools and the policies and procedures
+defined by the SciTools steering council, including the process used to manage this CLA.
 
 
 ## 11. General
@@ -226,25 +228,29 @@ United Kingdom.
 
 ----------------------------
 
+```
+
 On behalf of the users of SciTools projects all around the world, we thank you in advance
 for your contributions:
-```
+
 ╔════╦╗───────╔╗──╔╗──╔╗────╔╗
-║╔╗╔╗║║───────║║──║╚╗╔╝║────║║
-╚╝║║╚╣╚═╦══╦═╗║║╔╗╚╗╚╝╔╩═╦╗╔╣║    @ @ @
-──║║─║╔╗║╔╗║╔╗╣╚╝╝─╚╗╔╣╔╗║║║╠╝    ~\|/~
-──║║─║║║║╔╗║║║║╔╗╗──║║║╚╝║╚╝╠╗     ) (
-──╚╝─╚╝╚╩╝╚╩╝╚╩╝╚╝──╚╝╚══╩══╩╝    (___)
-```
+║╔╗╔╗║║───────║║──║╚╗╔╝║────║║    @ @ @
+╚╝║║╚╣╚═╦══╦═╗║║╔╗╚╗╚╝╔╩═╦╗╔╣║    ~\|/~
+──║║─║╔╗║╔╗║╔╗╣╚╝╝─╚╗╔╣╔╗║║║╠╝     ) (
+──║║─║║║║╔╗║║║║╔╗╗──║║║╚╝║╚╝╠╗    (___)
+──╚╝─╚╝╚╩╝╚╩╝╚╩╝╚╝──╚╝╚══╩══╩╝
 
 
-Please type your name if you agree to the terms of this contributor license agreement.
-                                       | |
-                                      _| |_
-                                      \   /
-                                       \ /
-                                        Y
+Please type your name below if you agree to the terms of this contributor license agreement.
+
+                       | |
+                      _| |_
+                      \   /
+                       \ /
+                        Y
 
 Full Name:  <First name> <Last name>
+
      Date:  <YYYY-MM-DD>
 
+```
